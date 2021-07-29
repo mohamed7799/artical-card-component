@@ -82,6 +82,9 @@ main {
 
 .share-container > i {
   cursor: pointer;
+}
+
+.share-btn {
   padding: 1rem;
   background-color: #cfdae6;
   border-radius: 50%;
@@ -89,7 +92,7 @@ main {
   color: #48556a;
 }
 
-.share-details {
+.share-details-desktop {
   position: absolute;
   color: #ecf2f8;
   display: -webkit-box;
@@ -106,18 +109,18 @@ main {
   top: -160%;
 }
 
-.share-details p {
+.share-details-desktop p {
   font-weight: lighter;
   letter-spacing: 5px;
 }
 
-.share-details i {
+.share-details-desktop i {
   cursor: pointer;
   font-size: 1.5rem;
   padding: 1rem;
 }
 
-.share-details::after {
+.share-details-desktop::after {
   position: absolute;
   content: "";
   width: 0;
@@ -129,6 +132,32 @@ main {
   right: 0;
   margin: auto;
   bottom: -40%;
+}
+
+.share-details-mobile {
+  color: #ecf2f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 2rem;
+  background-color: #48556a;
+}
+
+.share-details-mobile i {
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.share-details-mobile p {
+  font-weight: lighter;
+  letter-spacing: 5px;
 }
 
 @media screen and (min-width: 850px) and (max-width: 1300px) {
@@ -146,4 +175,8 @@ main {
     width: 90%;
     margin: 4rem 0rem;
   }
+}
+
+.hidden {
+  display: none;
 }

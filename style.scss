@@ -72,16 +72,18 @@ main {
   margin-left: auto;
   & > i {
     cursor: pointer;
-
-    padding: 1rem;
-    background-color: rgb(207, 218, 230);
-    border-radius: 50%;
-    font-size: 1.2rem;
-    color: $Very-Dark-Grayish-Blue;
   }
 }
 
-.share-details {
+.share-btn {
+  padding: 1rem;
+  background-color: rgb(207, 218, 230);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: $Very-Dark-Grayish-Blue;
+}
+
+.share-details-desktop {
   position: absolute;
   color: $Light-Grayish-Blue;
   display: flex;
@@ -116,6 +118,24 @@ main {
   }
 }
 
+.share-details-mobile {
+  color: $Light-Grayish-Blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background-color: $Very-Dark-Grayish-Blue;
+  & i {
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  & p {
+    font-weight: lighter;
+    letter-spacing: 5px;
+  }
+}
+
 //media
 
 @media screen and (min-width: 850px) and (max-width: 1300px) {
@@ -130,4 +150,9 @@ main {
     width: 90%;
     margin: 4rem 0rem;
   }
+}
+
+// dynamic class
+.hidden {
+  display: none;
 }
